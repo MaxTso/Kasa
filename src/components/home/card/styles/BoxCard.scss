@@ -1,0 +1,28 @@
+@import 'src/styles/index.scss';
+
+.box__card {
+    width: 80%;
+    background-color: $secondary-color;
+    margin: auto;
+    padding: 3% 2%;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+    @media (max-width: $tablet-media){
+        width: 90%;
+    }
+    .container__card {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 2%;
+        width: 100%;
+        box-sizing: border-box;
+        @media (max-width: $tablet-media){
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

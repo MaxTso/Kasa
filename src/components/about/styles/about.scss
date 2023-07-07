@@ -1,0 +1,7 @@
+@import '../../../styles/index.scss';
+
+.box__about{
+    @media (max-width: $tablet-media){
+        height: 220px;
+    }
+}

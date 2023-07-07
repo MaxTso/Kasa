@@ -1,0 +1,17 @@
+@import 'src/styles/index.scss';
+
+.footer {
+    background-color: black;
+    height: 200px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+
+}

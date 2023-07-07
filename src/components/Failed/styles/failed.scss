@@ -1,0 +1,43 @@
+@import '../../../styles/index.scss';
+
+
+.failed_container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 80%;
+    color: $primary-color;
+    h1 {
+        font-size: 280px;
+        font-weight: bold;
+        @media (max-width: $tablet-media){
+        font-size: 96px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    }
+    h3 {
+        font-size: 50px;
+        @media (max-width: $tablet-media){
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    }
+    .back {
+        font-size: 20px;
+        color: $primary-color;
+        @media (max-width: $tablet-media){
+        font-size: 14px;
+        margin-bottom: 15%;
+    }
+    }
+}
+
+
+
+
+

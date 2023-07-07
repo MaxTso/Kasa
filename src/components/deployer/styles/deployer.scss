@@ -1,0 +1,109 @@
+@import '../../../styles/index.scss';
+
+@keyframes rotatedown {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+    }
+    100% {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+    }
+}
+
+@keyframes rotateup {
+    0%{
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+    }
+    50%{
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: flex;
+}
+
+.deployer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    background-color: $secondary-color;
+    box-sizing: border-box;
+    margin-top: 30px;
+    @media (max-width: $tablet-media){
+        width: 90%;
+    }
+    .deployer__controller {
+        background-color: $primary-color;
+        box-sizing: border-box;
+        display: flex;
+        color: white;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 24px;
+        font-family: $font;
+        border-radius: 5px;
+        padding: 15px 0;
+        img {
+            margin-right: 15px;
+        }
+        h2{
+            margin-left: 15px
+        }
+        &__up {
+            @extend .deployer__controller;
+            img {
+                animation: rotateup 200ms ease-out forwards;
+            }
+        }
+        &__down{
+            @extend .deployer__controller;
+            img{
+                animation: rotatedown 200ms ease-out forwards;
+            }
+        }
+    
+    }
+    
+    .deployer__textcontent {
+        overflow: hidden;
+        color: $primary-color;
+        font-family: $font;
+        font-size: 18px;
+        transition: max-height 400ms cubic-bezier(.52,-0.01,.56,.67);
+        p {
+            margin: 20px;
+            transition: transform 600ms ease-out;
+        }
+    }
+    
+    .deployer__textcontent.off {
+        max-height: 0;
+        p{
+            transform: translateY(-200px);
+        }
+    }
+    
+    .deployer__textcontent.on {
+        max-height: 500px;
+    }
+}
+
+
